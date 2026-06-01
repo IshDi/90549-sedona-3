@@ -54,7 +54,7 @@ body {
   margin: 0 auto;
 }
 
-
+/* button */
 .button {
   font-family: inherit;
   font-size: 20px;
@@ -66,6 +66,8 @@ body {
   text-decoration: none;
   text-transform: uppercase;
   border: none;
+  border-radius: 4px;
+  padding: 8px 50px;
 }
 
 .button-additional {
@@ -82,6 +84,37 @@ body {
 
 
 
+.page-headline {
+  font-size: 30px;
+  line-height: 36px;
+  font-weight: 700;
+  color: #000000;
+  text-align: center;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.page-desc {
+  text-align: center;
+  margin: 0;
+}
+
+.page-subtitle {
+  font-size: 24px;
+  line-height: 28px;
+  font-weight: 700;
+  color: #000000;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.page-headline-and-desc-other-color {
+  color: #ffffff;
+}
+
+
+
+
 
 
 /* header */
@@ -90,8 +123,7 @@ body {
 
   color: #000000;
   background-color: #ffffff;
-  padding-left: 70px;
-  padding-right: 70px;
+  padding: 0 70px;
 }
 
 .header-logo-link {
@@ -105,6 +137,7 @@ body {
 .navigation {
   display: flex;
   justify-content: space-between;
+  flex-grow: 1;
 }
 
 .navigation-list {
@@ -138,6 +171,13 @@ body {
   padding: 8px 34px;
 }
 
+.navigation-user .navigation-list {
+  min-width: 20px;
+  min-height: 20px;
+}
+
+
+
 .main-index,
 .main-inner {
   flex-grow: 1;
@@ -152,6 +192,9 @@ body {
   background-position: center center;
   background-repeat: no-repeat;
   text-align: center;
+
+  padding-inline: 70px;
+  min-height: 485px;
 }
 
 .preview-image {
@@ -159,40 +202,17 @@ body {
   padding-bottom: 76px;
 }
 
-.page-headline {
-  font-size: 30px;
-  line-height: 36px;
-  font-weight: 700;
-  color: #000000;
-  text-align: center;
-  text-transform: uppercase;
-}
-
-.page-desc {
-  text-align: center;
-}
-
-.page-subtitle {
-  font-size: 24px;
-  line-height: 28px;
-  font-weight: 700;
-  color: #000000;
-  text-transform: uppercase;
-}
-
-.page-headline-and-desc-other-color {
-  color: #ffffff;
-}
-
-
 
 /* advantages  */
 .advantages-title {
-  margin-top: 69px;
+  padding-top: 69px;
+  padding-inline: 70px;
+  margin-bottom: 25px;
 }
 
 .advantages-description {
   margin-bottom: 90px;
+  padding-inline: 70px;
 }
 
 .advantages-list {
@@ -208,14 +228,27 @@ body {
 
 .advantages-item {
   text-align: center;
+
+  display: flex;
+  flex-direction: column;
+  min-height: 385px;
 }
 
+.advantages-item-title {
+  min-height: 50%;
+
+  align-content: end;
+}
+
+.advantages-item-description {
+   margin: 0;
+}
 
 .advantages-container,
 .advantages-item-element {
   width: 400px;
   box-sizing: border-box;
-  padding: 100px 80px;
+  padding: 112px 85px;
 }
 
 .advantages-with-image {
@@ -239,8 +272,18 @@ body {
 }
 
 
-
 /* recommendations */
+.recommendations-title {
+  padding-top: 64px;
+  padding-inline: 70px;
+  margin-bottom: 20px;
+}
+
+.recommendations-description {
+  margin-bottom: 64px;
+  padding-inline: 70px;
+}
+
 .recommendations-list {
   display: flex;
   flex-direction: row;
@@ -254,7 +297,10 @@ body {
 
 .recommendations-item {
   text-align: center;
-  width: 33.33%;
+  width: 400px;
+  box-sizing: border-box;
+  padding: 80px 85px;
+
 }
 
 .recommendations-item:nth-child(2n) {
@@ -262,20 +308,35 @@ body {
 }
 
 .recommendations-item-description {
+  margin: 0;
   font-size: 18px;
   line-height: 21px;
 }
 
+.recommendations-item svg {
+  min-width: 72px;
+  min-height: 75px;
+  margin-bottom: 23px;
+}
 
+.recommendations-item-title  {
+  margin-bottom: 30px;
+}
 
+/* booking */
 .booking {
   text-align: center;
+  padding: 96px 70px;
 }
 
-.subscription {
-  text-align: center;
+.booking-title {
+  padding-inline: 70px;
+  margin-bottom: 20px;
 }
 
+.booking-description {
+  margin-bottom: 54px;
+}
 
 /* filter */
 .filter-container {
@@ -296,8 +357,8 @@ body {
 .inner-header-title {
   font-size: 60px;
   line-height: 78px;
-  margin-top: 0;
-  margin-bottom: 0;
+  margin: 0;
+  margin-bottom: 3px;
 }
 
 .breadcrumbs-list {
@@ -307,6 +368,7 @@ body {
   margin: 0;
   padding: 0;
   list-style-type: none;
+  margin-bottom: 40px;
 }
 
 .breadcrumbs-link {
@@ -316,22 +378,35 @@ body {
   text-decoration: none;
 }
 
+.breadcrumbs-home {
+  margin-right: 28px;
+}
+
 .sorting-filter {
   display: flex;
   flex-direction: row;
+  gap: 70px;
 }
 
 .sorting-filter-group {
   border: none;
+  padding: 0;
+  margin: 0;
 }
 
 .sorting-filter-title {
   font-size: 20px;
   line-height: 24px;
   font-weight: 700;
+  padding: 0;
+  margin-bottom: 32px;
 }
 
 .sorting-filter-list {
+  display: flex;
+  flex-direction: column;
+  min-height: 112px;
+  gap: 16px;
   padding: 0;
   margin: 0;
   list-style-type: none;
@@ -347,6 +422,7 @@ body {
   line-height: 36px;
   text-transform: uppercase;
   color: #000000;
+  margin: 0;
 }
 
 .select-control {
@@ -359,11 +435,22 @@ body {
 .sort {
   display: flex;
   flex-direction: row;
+  gap: 8px;
 
   padding: 0;
   margin: 0;
   list-style-type: none;
 }
+
+.sort-link {
+  display: block;
+  margin: 0;
+  box-sizing: border-box;
+  border: 2px solid #E5E5E5;
+  padding: 8px 14px;
+  border-radius: 4px;
+}
+
 
 
 /* catalog */
@@ -371,13 +458,14 @@ body {
   display: flex;
   flex-direction: column;
 
-  padding: 50px 70px 60px;
+  padding: 57px 70px 60px;
 }
 
 .catalog-nav {
   display: flex;
   flex-direction: row;
   align-items: center;
+  justify-content: space-between;
 
   margin-bottom: 20px;
 }
@@ -389,30 +477,52 @@ body {
 
   margin: 0;
   padding: 0;
+  gap: 20px 20px;
   list-style-type: none;
+  margin-bottom: 80px;
 }
 
 .catalog-card {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-rows: 212px min-content auto;
+  grid-template-columns: 300px;
 
   width: 340px;
   padding: 20px;
   box-sizing: border-box;
-  margin-bottom: 20px;
 
   border: 1px solid #e6e6e6;
   border-radius: 4px;
 }
 
-.catalog-card:not(:nth-child(3n)) {
-  margin-right: 20px;
+.catalog-card-link {
+  grid-column: 1 / -1;
+}
+
+.catalog-card-title,
+.catalog-card-info {
+  grid-column: 1 / 2;
+}
+
+.catalog-card-info {
+  display: grid;
+  grid-template-columns: 140px 140px;
+  gap: 16px;
+}
+
+.catalog-card-button,
+.favorites {
+  font-size: 16px;
+  line-height: 20px;
+  padding: 8px 0;
+  box-sizing: border-box;
 }
 
 .catalog-card-title {
   font-size: 24px;
   line-height: 28px;
   color: #000000;
+
 }
 
 .catalog-card-type,
@@ -421,13 +531,22 @@ body {
   line-height: 21px;
 }
 
+.catalog-card-price {
+  justify-self: end;
+}
+
 .catalog-card-rating {
   font-size: 16px;
   line-height: 20px;
   text-transform: uppercase;
   background-color: #f2f2f2;
+  justify-self: center;
+  padding: 9px 22px;
 }
 
+.catalog-card-info svg {
+  align-self: center;
+}
 
 
 /* pagination */
@@ -436,6 +555,7 @@ body {
   display: flex;
   flex-direction: row;
 
+  gap: 8px;
   margin: 0;
   padding: 0;
   list-style-type: none;
@@ -451,8 +571,6 @@ body {
   line-height: 36px;
   width: 60px;
   height: 60px;
-
-  margin-right: 8px;
 
   border-radius: 4px;
 
@@ -471,7 +589,7 @@ body {
   background-color: #f2f2f2;
 }
 
-
+/* subscription */
 
 .main-page-subscription {
   background-color: #4d7b9a;
@@ -481,29 +599,69 @@ body {
   background-repeat: no-repeat;
 }
 
+.subscription {
+  text-align: center;
+  padding: 96px 70px 104px 70px;
+}
+
+.subscription-title {
+  margin-bottom: 20px;
+}
+
+.subscription-description {
+  margin-bottom: 55px;
+}
+
+.subscription-form {
+  display: flex;
+  justify-content: center;
+}
+
 .subscription input {
   font-family: inherit;
   font-weight: 400;
   font-size: 18px;
   line-height: 133%;
+
+  padding: 14px 20px;
+  border: none;
+  border-radius: 4px 0 0 4px;
+  width: 452px;
+  box-sizing: border-box;
+  background: #F2F2F2;
 }
 
+.subscription-button {
+  border-radius: 0 4px 4px 0;
+}
 
-
+/* footer */
 .main-footer {
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
   align-items: center;
+  padding: 40px 70px 30px 70px;
 }
+
 
 .social-list {
   display: flex;
+  flex-wrap: wrap;
   flex-direction: row;
   align-items: center;
 
   padding: 0;
   margin: 0;
   list-style-type: none;
+}
+
+.social-item-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 47px;
+  min-height: 40px;
 }
 
 .contacts-address a {
